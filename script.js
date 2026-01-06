@@ -21,10 +21,10 @@ if (hamburger && navMenu) {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        
+
         const targetId = this.getAttribute('href');
         if(targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if(targetElement) {
             window.scrollTo({
@@ -41,7 +41,7 @@ let navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    
+
     const scrollPosition = window.scrollY || window.pageYOffset;
 
     sections.forEach(section => {
@@ -51,7 +51,7 @@ window.addEventListener('scroll', () => {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if(link.getAttribute('href').substring(1) === current) {
@@ -77,7 +77,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements that should animate when scrolled into view
 document.addEventListener('DOMContentLoaded', () => {
     const animateElements = document.querySelectorAll('.feature, .category, .stat, .terminal-container');
-    
+
     animateElements.forEach(el => {
         observer.observe(el);
     });
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function typeTerminalEffect(element, text, speed = 50) {
     let i = 0;
     element.innerHTML = '';
-    
+
     function type() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
@@ -142,13 +142,13 @@ function createParticles() {
 function animateNetwork() {
     const nodes = document.querySelectorAll('.node');
     const connections = document.querySelectorAll('.connection');
-    
+
     nodes.forEach((node, index) => {
         setTimeout(() => {
             node.style.animation = `pulse ${Math.random() * 2 + 1}s infinite`;
         }, index * 200);
     });
-    
+
     connections.forEach((connection, index) => {
         setTimeout(() => {
             connection.style.animation = `connect ${Math.random() * 4 + 2}s infinite`;
@@ -159,19 +159,19 @@ function animateNetwork() {
 // Form submission handling (if contact form is added later)
 document.addEventListener('DOMContentLoaded', () => {
     const contactForms = document.querySelectorAll('form');
-    
+
     contactForms.forEach(form => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Simple form validation and submission feedback
             const formData = new FormData(form);
             const formObject = Object.fromEntries(formData);
-            
+
             // Check if required fields are filled
             let isValid = true;
             const requiredFields = form.querySelectorAll('[required]');
-            
+
             requiredFields.forEach(field => {
                 if(!field.value.trim()) {
                     isValid = false;
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     field.style.borderColor = '';
                 }
             });
-            
+
             if(isValid) {
                 // Simulate form submission
                 const submitButton = form.querySelector('button[type="submit"]');
@@ -258,11 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Scroll animations for additional elements
 const scrollAnimations = () => {
     const elements = document.querySelectorAll('.section-header h2, .section-header p');
-    
+
     elements.forEach(el => {
         const elementPosition = el.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.3;
-        
+
         if(elementPosition < screenPosition) {
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
@@ -273,11 +273,11 @@ const scrollAnimations = () => {
 // Enhanced terminal effect
 function enhanceTerminal() {
     const terminals = document.querySelectorAll('.terminal-container');
-    
+
     terminals.forEach(terminal => {
         const body = terminal.querySelector('.terminal-body');
         const lines = body.querySelectorAll('.terminal-line');
-        
+
         lines.forEach((line, index) => {
             setTimeout(() => {
                 line.style.opacity = '1';
@@ -285,7 +285,7 @@ function enhanceTerminal() {
             }, index * 300);
         });
     });
-}
+};
 
 // Add dynamic background effect
 function createDynamicBackground() {
@@ -383,4 +383,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add dynamic background effect
     createDynamicBackground();
 });
-
