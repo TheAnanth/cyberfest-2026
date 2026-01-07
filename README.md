@@ -5,7 +5,7 @@ A National-Level Cybersecurity Conclave website for CyberFest 2K26, hosted at CB
 ## 🎯 Event Overview
 
 - **Event:** CyberFest 2K26 - National Cybersecurity Conclave
-- **Dates:** 30th & 31st January 2026
+- **Dates:** 6th & 7th February 2026
 - **Venue:** Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad
 - **Duration:** 24-36 Hours Continuous Event
 - **Organized By:** Digital Defence Club (DDC), CBIT
