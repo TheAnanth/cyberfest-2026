@@ -62,7 +62,7 @@ const ScheduleSection = () => {
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mb-6" />
           <p className="font-rajdhani text-lg text-foreground/70">
-            30th & 31st January 2026
+            6th & 7th February 2026
           </p>
         </motion.div>
 
@@ -77,7 +77,7 @@ const ScheduleSection = () => {
             <div className="bg-gradient-to-r from-primary/20 to-accent/20 p-6 border-b border-primary/20">
               <h3 className="font-orbitron text-2xl font-bold flex items-center gap-3">
                 <Clock className="w-6 h-6 text-primary" />
-                Day 1 - 30th January
+                Day 1 - 6th February
               </h3>
             </div>
             <div className="p-6 space-y-4">
@@ -109,7 +109,7 @@ const ScheduleSection = () => {
             <div className="bg-gradient-to-r from-secondary/20 to-primary/20 p-6 border-b border-secondary/20">
               <h3 className="font-orbitron text-2xl font-bold flex items-center gap-3">
                 <Clock className="w-6 h-6 text-secondary" />
-                Day 2 - 31st January
+                Day 2 - 7th February
               </h3>
             </div>
             <div className="p-6 space-y-4">
